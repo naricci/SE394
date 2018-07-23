@@ -1,2 +1,2 @@
-# SE402
+# SE394
 Algorithms in Software Engineering

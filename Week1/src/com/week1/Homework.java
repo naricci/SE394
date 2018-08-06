@@ -1,10 +1,11 @@
+package com.week1;
+
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
 
-public class ProfExample {
-
+public class Homework {
     public static void main(String[] args) {
 
         long start = System.nanoTime();
@@ -23,12 +24,30 @@ public class ProfExample {
 
     public static void calculate() {
 
+        Scanner kb = new Scanner(System.in);
         String sentence = "This is an awesome text with lots of text in an awesome representation";
         String[] words = sentence.split("\\s");
-        Set<String> uniques = new TreeSet<>();
+        boolean isInArray = false;
+        String[] uniques = new String[10];
+
+//        int i = 0;
+//        do {
+//            uniques[i] = words[i];
+//            i++;
+//        } while(!uniques.equals(words));
+
+
         for (int i = 0; i < words.length; i++) {
-            uniques.add(words[i]);
-        }
+            String newWord = words[i];
+            isInArray = false;
+            if (i > 0) {
+                for (int x = i; x < words.length; x++) {
+                    if (uniques[i].equalsIgnoreCase(newWord)) {
+                        isInArray = true;
+                        break;
+                    }
+                }
+            }
 
         // For Reading From File
 //		FileReader fr = new FileReader("C:\\Users\\001405200\\Desktop\file.txt");

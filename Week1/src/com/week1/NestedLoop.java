@@ -1,9 +1,11 @@
+package com.week1;
+
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
 
-public class ProfExample {
+public class NestedLoop {
 
     public static void main(String[] args) {
 
@@ -23,6 +25,7 @@ public class ProfExample {
 
     public static void calculate() {
 
+        Scanner kb = new Scanner(System.in);
         String sentence = "This is an awesome text with lots of text in an awesome representation";
         String[] words = sentence.split("\\s");
         Set<String> uniques = new TreeSet<>();
